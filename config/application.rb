@@ -15,3 +15,4 @@ module Kizuna
       g.test_framework false
   end
 end
+end

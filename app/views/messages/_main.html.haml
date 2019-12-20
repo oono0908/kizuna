@@ -1,0 +1,35 @@
+.main
+  .main__top
+    .main__top__left
+      sin
+    .main__top__right
+      =link_to "#" do      
+        %i.fa.fa-user-injured
+      =link_to "#" do 
+        %i.fa.fa-apple-alt
+      =link_to "#" do   
+        %i.fa.fa-running
+  .main__middle
+    .main__middle__message
+      .main__middle__message__quest
+        質問
+      .main__middle__message__answer
+        回答
+    .main__middle__message
+      .main__middle__message__quest
+        質問
+      .main__middle__message__answer
+        回答
+    .main__middle__message
+      .main__middle__message__quest
+        質問
+      .main__middle__message__answer
+        回答
+  .main__bottom
+    -# %form
+    %input.main__bottom__quest{type: "text", placeholder: "質問を入力してください"}
+      %label.main__bottom__quest__image
+        = icon("fa", "image", class: "icon")
+        %input.hidden{type: "file"}
+    %input.main__bottom__send{type: "submit", value: "質問する"}
+      

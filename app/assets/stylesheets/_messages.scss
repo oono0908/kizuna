@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+  .side_bar{
+    height: 100vh;
+    width: 250px;
+    &__top{
+      font-size: 50px;
+      height: 90px;
+      width: 250px;
+      text-align: center;
+      background-color: green;
+    }
+    &__under{
+      height: calc(100vh - 90px);
+      width: 250px;
+      background-color: blue;
+      &__type{
+        font-size: 30px;
+        height: 50px;
+        width: 250px;
+        background-color: yellow;
+        border: 1px solid;
+      }
+    }
+  }
+  .main{
+    height: 100vh;
+    width: calc(100vw - 250px);
+    &__top{
+      height: 90px;
+      width: calc(100vw - 250px);
+      float: right;
+      display: flex;
+      &__left{
+        width: 50%;
+        height: 90px;
+        background-color: gray;
+      }
+      &__right{
+        width: 50%;
+        height: 90px;
+        background-color: pink;
+        i{
+          font-size: 40px;
+          margin-right: 10px;
+          float: right;
+          line-height: 90px;
+        }
+      }
+      &__left{
+        font-size: 20px;
+        line-height: 90px;
+      }
+    }
+    &__middle{
+      width: calc(100vw - 250px);
+      height: calc(100vh - 90px - 90px);
+      background-color: red;
+      overflow: scroll;
+      &__message{
+        width: 700px;
+        height: 400px;
+        margin: 0 auto;
+        background-color: seashell;
+        margin-top: 10px;
+        padding-top: 10px;
+        &__quest{
+          height: 250px;
+          width: 650px;
+          margin: 0 auto;
+          background-color: violet;
+          margin-top: 10px;
+        }
+        &__answer{
+          width: 650px;
+          height: 100px;
+          margin: 0 auto;
+          background-color: yellow;
+          margin-top: 10px;
+        }
+      }
+    }
+    &__bottom{
+      height: 90px;
+      width: calc(100vw - 250px);
+      background-color: palegreen;
+      display: flex;
+      padding-top: 15px;
+      // form{
+      //   height: 60px;
+      //   width: 100vw;
+      &__quest{
+        width: 80%;
+        height: 60px;
+        background-color: papayawhip;
+        margin: 0 auto;
+          &__image{
+            font-size: 20px;
+            margin-top: 20px;
+          }
+        
+      }
+      &__send{
+        height: 40px;
+        width: 70px;
+        background-color: peru;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-right: 80px;
+        font-size: 10px;
+        text-align: center;
+        line-height: 40px;
+        float: right;
+      }
+    }
+  }
+  .hidden{
+    display: none;
+  }
+}
+
