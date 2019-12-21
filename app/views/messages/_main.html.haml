@@ -2,8 +2,10 @@
   .main__top
     .main__top__left
       member:
+      = link_to edit_user_path(current_user) do
+        %i.fa.fa-user-edit
       .main__top__left__member
-        sin
+        = current_user.name
     .main__top__right
       =link_to "#" do      
         %i.fa.fa-user-injured
