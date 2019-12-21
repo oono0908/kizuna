@@ -3,27 +3,32 @@
 }
 
 .wrapper{
+  background-image: url("https://media.gettyimages.com/photos/kevin-mayer-of-france-reacts-during-the-mens-decathlon-shot-put-on-picture-id591381852?s=2048x2048");
   display: flex;
+  background-size: 100%;
   .side_bar{
     height: 100vh;
     width: 250px;
+    opacity: 0.8;
     &__top{
       font-size: 50px;
       height: 90px;
       width: 250px;
       text-align: center;
-      background-color: green;
+      background-color: yellow;
     }
     &__under{
       height: calc(100vh - 90px);
       width: 250px;
-      background-color: blue;
+      background-color:black;
+      overflow: scroll;
       &__type{
         font-size: 30px;
         height: 50px;
         width: 250px;
         background-color: yellow;
         border: 1px solid;
+        font-family: cursive;
       }
     }
   }
@@ -35,11 +40,14 @@
       width: calc(100vw - 250px);
       float: right;
       display: flex;
+      opacity: 0.8;
       &__left{
         width: 50%;
         height: 90px;
-        background-color: gray;
+        background-color:black;
         font-size: 20px;
+        opacity: 0.8;
+        color: white;
         &__member{
           font-size: 20px;
           width: 80%;
@@ -50,12 +58,14 @@
       &__right{
         width: 50%;
         height: 90px;
-        background-color: pink;
+        background-color:black;
+        opacity: 0.8;
         i{
           font-size: 40px;
           margin-right: 10px;
           float: right;
           line-height: 90px;
+          color: white;
         }
       }
       &__left{
@@ -66,55 +76,69 @@
     &__middle{
       width: calc(100vw - 250px);
       height: calc(100vh - 90px - 90px);
-      background-color: red;
+      // background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSkwl92jNWzdQ92Yzo4vopnsWRtrKzWdhNxtfz7Ru5GKpdMUHAs";
+      // background-size: 100%;
       overflow: scroll;
       &__message{
         width: 700px;
         height: 400px;
-        margin: 0 auto;
-        background-color: seashell;
+        float: right;
+        background-color: black;
         margin-top: 10px;
         padding-top: 10px;
+        opacity: 0.8;
+        border-radius: 30px;
         &__quest{
           height: 250px;
           width: 650px;
           margin: 0 auto;
-          background-color: violet;
+          background-color:white;
           margin-top: 10px;
+          border: 1px solid;
+          overflow: scroll;
+          text-align: center;
+          border-radius: 30px;
         }
         &__answer{
           width: 650px;
           height: 100px;
           margin: 0 auto;
-          background-color: yellow;
+          background-color:white;
           margin-top: 10px;
+          border: 1px solid;
+          overflow: scroll;
+          text-align: center;
+          border-radius: 30px;
         }
       }
     }
     &__bottom{
       height: 90px;
       width: calc(100vw - 250px);
-      background-color: palegreen;
+      background-color:black;
       display: flex;
       padding-top: 15px;
+      opacity: 0.8;
       // form{
       //   height: 60px;
       //   width: 100vw;
       &__quest{
         width: 80%;
         height: 60px;
-        background-color: papayawhip;
+        background-color: white;
         margin: 0 auto;
+        border-radius: 30px;
           &__image{
             font-size: 20px;
             margin-top: 20px;
+            color: white;
           }
         
       }
       &__send{
         height: 40px;
         width: 70px;
-        background-color: peru;
+        background-color: yellow;
         margin: 0 auto;
         margin-top: 10px;
         margin-right: 80px;
@@ -122,6 +146,7 @@
         text-align: center;
         line-height: 40px;
         float: right;
+        border-radius: 30px;
       }
     }
   }
