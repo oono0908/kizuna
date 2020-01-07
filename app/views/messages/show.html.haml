@@ -1,0 +1,21 @@
+.wrapper__show
+  .wrapper__show__top
+    = @group.name
+    = link_to root_path do
+      TOPページに戻る
+  .wrapper__show__left
+    .wrapper__show__left__message
+      = @message.content
+    - if @message.video.present?
+      .wrapper__show__left__image
+        = video_tag @message.video.url, width: "600px", height: "500px"
+  .wrapper__show__right
+    - @comments.each do |comment|
+      .wrapper__show__right__message
+        = comment.content
+        .wrapper__show__right__message__name
+          = current_user.name
+  .wrapper__show__bottom
+    = form_for [@group, @message, @comment] do |f|
+      = f.text_field :content, class: "wrapper__show__bottom__answer", placeholder: "回答を入力してください" 
+      = f.submit "回答する", class: "wrapper__show__bottom__send"

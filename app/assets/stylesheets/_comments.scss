@@ -1,0 +1,40 @@
+.main__middle__message__answered{
+  width: 650px;
+  height: 100px;
+  margin: 0 auto;
+  background-color:white;
+  margin-top: 10px;
+  border: 1px solid;
+  overflow: scroll;
+  text-align: center;
+  border-radius: 30px;
+  margin-left: 20px;
+}
+.main__middle__message__answer{
+  width: 650px;
+  height: 100px;
+  margin: 0 auto;
+  background-color:white;
+  margin-top: 10px;
+  border: 1px solid;
+  overflow: scroll;
+  text-align: center;
+  border-radius: 30px;
+  margin-left: 20px;
+}
+.main__middle__message__submit{
+  float: right;
+  border-radius: 30px;
+  border: 1px solid white;
+  height: 40px;
+  width: 70px;
+  font-size: 10px;
+  margin-right: 35px;
+  text-align: center;
+  line-height: 40px;
+  a{
+    text-decoration: none;
+    color: white;
+  }
+}
+

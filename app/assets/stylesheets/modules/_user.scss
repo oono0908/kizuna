@@ -1,6 +1,6 @@
 .account-page {
-  background-image: url("https://media.gettyimages.com/photos/suguru-osako-of-japan-competes-in-the-mens-5000m-on-day-12-of-the-rio-picture-id592333850?s=2048x2048");
-  background-size: 100%;
+  // background-image: url("https://media.gettyimages.com/photos/suguru-osako-of-japan-competes-in-the-mens-5000m-on-day-12-of-the-rio-picture-id592333850?s=2048x2048");
+  // background-size: 100%;
   .account-page__inner {
     width: 980px;
     height: 100vh;
@@ -10,7 +10,7 @@
     // border: 1px solid #ddd;
     // border-radius: 5px;
     opacity: 0.9;
-
+    
     .account-page__inner--left, .account-page__inner--right {
       float: left;
       width: 50%;
@@ -28,7 +28,7 @@
       letter-spacing: 3px;
       font-size: 40px;
       font-weight: 200;
-      color: white;
+      color: black;
       &:after {
         content: '';
         display: block;

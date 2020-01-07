@@ -1,0 +1,102 @@
+.train_wrapper
+  .header
+    .header__left
+      Let's try checking your ability 
+    .header__right
+      = link_to root_path do
+        TOPページに戻る
+  .middle
+    = form_for [@train] do |f|
+      .middle__main_left
+        %h3 50M走
+        = f.text_field :short, class: "middle__main_left__short", placeholder: "タイムを入力してください 例 10秒11 => 1011"
+        %h3 1500M走
+        = f.text_field :long, class: "middle__main_left__long", placeholder: "タイムを入力してください 例 5分10秒 => 510"
+        %h3 立ち幅跳び
+        = f.text_field :jump, class: "middle__main_left__jump", placeholder: "ｃｍで入力してください 例 280 => 280"
+        %h3 上体起こし
+        = f.text_field :situp, class: "middle__main_left__situp", placeholder: "回数を入力してください"
+        %h3 ハンドボール投げ
+        = f.text_field :hand, class: "middle__main_left__hand", placeholder: "距離を入力してください 例 35m => 35"
+        %h3 反復横跳び
+        = f.text_field :side, class: "middle__main_left__side", placeholder: "回数を入力してください"
+        = f.submit "送信", class: "middle__main_left__send"
+    .middle__main_right
+      %table
+        %caption
+          結果
+          %thead
+            %tr
+              %th
+                種目
+                %th
+                  結果
+                  %th
+                    ランク
+          %tbody
+            %tr
+              %td
+                50M走
+                %td
+                  = @short
+                  %td
+                    = @ranks
+            %tr
+              %td
+                1500M走
+                %td
+                  = @long
+                  %td
+                    = @ranksl
+            %tr
+              %td
+                立ち幅跳び
+                %td
+                  = @jump
+                  %td
+                    = @ranksj
+            %tr
+              %td
+                上体起こし
+                %td
+                  = @situp
+                  %td
+                    = @rankss
+            %tr
+              %td
+                ハンドボール投げ
+                %td
+                  = @hand
+                  %td
+                    = @ranksh
+            %tr
+              %td
+                反復横跳び
+                %td
+                  = @side
+                  %td
+                    = @ranksi
+          %tfoot
+            %tr
+              %td
+                総合評価
+                %td
+
+                  %td
+                    = @rank
+              
+      -# %h3 50M走
+      -# .middle__main_right__short
+      -# %h3 1500M走
+      -# .middle__main_right__long
+      -# %h3 立ち幅跳び
+      -# .middle__main_right__jump
+      -# %h3 上体起こし
+      -# .middle__main_right__situp
+      -# %h3 ハンドボール投げ
+      -# .middle__main_right__hand
+      -# %h3 反復横跳び
+      -# .middle__main_right__side
+  .bottom
+    Your rank is
+    = @rank

@@ -1,0 +1,10 @@
+.side_bar
+  .side_bar__top
+    絆
+    = link_to new_group_path do
+      %i.fa.fa-plus
+  .side_bar__under
+    - current_user.groups.each do |group|
+      .side_bar__under__type
+        = link_to group_messages_path(group) do
+          = group.name

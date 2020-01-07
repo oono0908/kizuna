@@ -1,0 +1,99 @@
+.wrapper_belly{
+  background-image: url("https://mens-bidan.jp/wp-content/uploads/-1-e1527482997600.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-size: contain;
+  background-repeat:  no-repeat; 
+  background-position:center center;
+  &__top{
+    height: 90px;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.7;
+    border: 2px solid yellow;
+    h2{
+      font-size: 50px;
+      color: yellow;
+    }
+    a{
+      float: right;
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+    }
+  }
+  &__middle{
+    height: calc(100vh - 90px - 90px);
+    width: 100vw;
+    display: flex;
+    &__left{
+      margin: 0 auto;
+      width: 90%;
+      height: 90%;
+      margin-top: 20px;
+      background-color: black;
+      border: 2px solid yellow;
+      opacity: 0.7;
+      &__title{
+        width: 90%;
+        height: 40px;
+        background-color: white;
+        // opacity: 0.8;
+        margin: 30px;
+      }
+      &__content{
+        width: 90%;
+        height: 350px;
+        background-color: white;
+        // opacity: 0.8;
+        margin: 30px;
+      }
+      &__image{
+        font-size: 30px;
+        margin: 30px;
+        color: white;
+      }
+      &__send{
+        float: right;
+        font-size: 30px;
+        margin-right: 50px;
+
+      }
+    }
+    &__right{
+      margin: 0 auto;
+      width: 90%;
+      height: 90%;
+      background-color: black;
+      opacity: 0.7;
+      // background-color: white;
+      margin-top: 20px;
+      overflow: scroll;
+      margin-left: 10px;
+      border: 2px solid yellow;
+      &__a{
+        overflow: scroll;
+        &__title{
+          width: 90%;
+          height: 40px;
+          background-color: white;
+          // opacity: 0.8;
+          margin: 30px;
+        }
+        &__content{
+          width: 90%;
+          height: 350px;
+          background-color: white;
+          // opacity: 0.8;
+          margin: 30px;
+        }
+      }
+    }
+  }
+  &__bottom{
+    font-size: 33px;
+  }
+  .file{
+    display: none;
+  }
+}

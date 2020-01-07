@@ -1,0 +1,113 @@
+.wrapper__nikkan
+  Today's news
+  = link_to root_path do
+    TOPページへ戻る
+  .wrapper__nikkan__header
+    .wrapper__nikkan__header__list
+      = link_to "https://hochi.news/" do
+        スポーツ報知
+    .wrapper__nikkan__header__list
+      = link_to "https://sports.yahoo.co.jp/" do
+        Yahoo sports
+    .wrapper__nikkan__header__list
+      = link_to "https://4years.asahi.com/" do
+        4years
+    .wrapper__nikkan__header__list
+      = link_to "https://jp.reuters.com/news/sports" do
+        Reuters
+    .wrapper__nikkan__header__list
+    
+      = link_to "https://spyder7.com/category/sport/foreign/latest/" do
+        Spyder7
+  .wrapper__nikkan__main
+    .wrapper__nikkan__main__list
+      .wrapper__nikkan__list__side
+        .wrapper__nikkan__list__side__a
+          = @text
+          = @time
+        .wrapper__nikkan__list__side__a
+          = @text1
+          = @time1
+        .wrapper__nikkan__list__side__a
+          = @text2
+          = @time2
+        .wrapper__nikkan__list__side__a
+          = @text3
+          = @time3
+        .wrapper__nikkan__list__side__a
+          = @text4
+          = @time4
+    .wrapper__nikkan__main__list
+      .wrapper__nikkan__list__side__b
+        = @textsp
+        = image_tag @imagesp
+      .wrapper__nikkan__list__side__b
+        = @textsp1
+        = image_tag @imagesp1
+      .wrapper__nikkan__list__side__b
+        = @textsp2
+        = image_tag @imagesp2
+      .wrapper__nikkan__list__side__b
+        = @textsp3
+        = image_tag @imagesp3
+      .wrapper__nikkan__list__side__b
+        = @textsp4
+        = image_tag @imagesp4
+        
+    .wrapper__nikkan__main__list
+      .wrapper__nikkan__list__side
+        .wrapper__nikkan__list__side__c
+          = @texty1
+          
+          -# = @timey1
+        .wrapper__nikkan__list__side__c
+          = @texty2
+        .wrapper__nikkan__list__side__c
+          = @texty3
+        .wrapper__nikkan__list__side__c
+          = @texty4
+        .wrapper__nikkan__list__side__c
+          = @texty5
+
+        -# = image_tag @link2
+       
+    .wrapper__nikkan__main__list
+      .wrapper__nikkan__list__side
+        .wrapper__nikkan__list__side__d
+          -# = image_tag @imagey1
+          = @textro1
+        .wrapper__nikkan__list__side__d
+          -# = image_tag @imagey2
+          = @textro2
+        .wrapper__nikkan__list__side__d
+          -# = image_tag @imagey3
+          = @textro3
+        .wrapper__nikkan__list__side__d
+          -# = image_tag @imagey4
+          = @textro4
+        .wrapper__nikkan__list__side__d
+          = image_tag @imagey5
+          = @textro5
+        -# .wrapper__nikkan__list__side__in
+        -# = image_tag @link3
+       
+    .wrapper__nikkan__main__list
+      .wrapper__nikkan__list__side
+        .wrapper__nikkan__list__side__e
+          = @textse1
+        .wrapper__nikkan__list__side__e
+          = @textse2
+        .wrapper__nikkan__list__side__e
+          = @textse3
+        .wrapper__nikkan__list__side__e
+          = @textse4
+        .wrapper__nikkan__list__side__e
+          = @textse5
+        .wrapper__nikkan__list__side__e
+          = @textse6
+        .wrapper__nikkan__list__side__e
+          = @textse7
+          = image_tag @imagese
+        -# .wrapper__nikkan__list__side__in
+        -# = image_tag @link4
+  .wrapper__nikkan__bottom

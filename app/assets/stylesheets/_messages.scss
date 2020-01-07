@@ -6,16 +6,20 @@
   background-image: url("https://media.gettyimages.com/photos/kevin-mayer-of-france-reacts-during-the-mens-decathlon-shot-put-on-picture-id591381852?s=2048x2048");
   display: flex;
   background-size: 100%;
+  width: 100vw;
   .side_bar{
     height: 100vh;
     width: 250px;
-    opacity: 0.8;
+    // opacity: 0.8;
+    box-sizing: border-box;
     &__top{
-      font-size: 50px;
+      font-size: 100px;
       height: 90px;
       width: 250px;
       text-align: center;
-      // background-color: yellow;
+      padding-right: 50px;
+      color: red;
+      box-sizing: border-box;
       i{
         font-size: 10px;
       }
@@ -25,13 +29,21 @@
       width: 250px;
       // background-color:black;
       overflow: scroll;
+      margin-top: 30px;
+      box-sizing: border-box;
       &__type{
         font-size: 30px;
         height: 50px;
         width: 250px;
-        // background-color: yellow;
-        // border: 1px solid;
         font-family: cursive;
+        color: white;
+        margin-top: 7px;
+        margin-left: 25px;
+        box-sizing: border-box;
+        a{
+          text-decoration: none;
+          color: white;
+        }
       }
     }
   }
@@ -43,7 +55,7 @@
       width: calc(100vw - 250px);
       float: right;
       display: flex;
-      opacity: 0.8;
+      // opacity: 0.8;
       &__left{
         width: 50%;
         height: 90px;
@@ -54,18 +66,30 @@
         i{
           color: white;
         }
-        &__member{
+        li{
           font-size: 20px;
-          width: 80%;
-          height: 90px;
-          float: right;
+          color: black;
         }
+        // &__member{
+        //   font-size: 20px;
+        //   width: 50%;
+        //   height: 90px;
+        //   float: right;
+        // }
       }
       &__right{
         width: 50%;
         height: 90px;
         // background-color:black;
         opacity: 0.8;
+        &__group{
+          float: left;
+          font-size: 70px;
+          a{
+            text-decoration: none;
+            color: black;
+          }
+        }
         i{
           font-size: 40px;
           margin-right: 10px;
@@ -102,20 +126,54 @@
           margin-top: 10px;
           // border: 1px solid;
           overflow: scroll;
-          text-align: center;
+          // text-align: left;
           border-radius: 30px;
+          &__text{
+            width: 100%;
+            font-size: 20px;
+            padding: 10px;
+          }
+          &__image{
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+          }
+          &__show{
+          float: right;
+          padding-right: 20px;
+          a{
+            text-decoration: none;
+            margin-right: 5px;
+            color: black;
+          }
+          }
         }
-        &__answer{
-          width: 650px;
-          height: 100px;
-          margin: 0 auto;
-          background-color:white;
-          margin-top: 10px;
-          border: 1px solid;
-          overflow: scroll;
-          text-align: center;
-          border-radius: 30px;
-        }
+        // &__answer{
+        //   width: 650px;
+        //   height: 100px;
+        //   margin: 0 auto;
+        //   background-color:white;
+        //   margin-top: 10px;
+        //   border: 1px solid;
+        //   overflow: scroll;
+        //   text-align: center;
+        //   border-radius: 30px;
+        // }
+        // &__submit{
+        //   float: right;
+        //   border-radius: 30px;
+        //   border: 1px solid white;
+        //   height: 40px;
+        //   width: 70px;
+        //   font-size: 10px;
+        //   margin-right: 35px;
+        //   text-align: center;
+        //   line-height: 40px;
+        //   a{
+        //     text-decoration: none;
+        //     color: white;
+        //   }
+        // }
       }
     }
     &__bottom{
@@ -132,13 +190,23 @@
         width: 80%;
         height: 60px;
         background-color: white;
-        margin: 0 auto;
+        // margin: 0 auto;
         border-radius: 30px;
-          &__image{
-            font-size: 20px;
-            margin-top: 20px;
-            color: white;
-          }
+        float: left;
+      &__image{
+        // float: right;
+        height: 60px;
+        // line-height: 60px;
+            // font-size: 20px;
+            // margin-top: 20px;
+            // color: white;
+        // &__mask{
+        //   font-size: 20px;
+        //   margin-top: 20px;
+        //   color: white;
+        // }
+        
+      }
         
       }
       &__send{
@@ -146,19 +214,141 @@
         width: 70px;
         background-color: black;
         margin: 0 auto;
-        margin-top: 10px;
-        margin-right: 80px;
+        // margin-top: 10px;
+        // margin-right: 80px;
         font-size: 10px;
         text-align: center;
         line-height: 40px;
         float: right;
         border-radius: 30px;
         color: white;
+        margin-top: 10px;
       }
     }
   }
   .hidden{
     display: none;
   }
+  .new_message{
+    width: 80%;
+  }
+  .icon{
+    font-size: 30px;
+    padding-right: 40px;
+    margin-top: 17px;
+  }
 }
+
+.wrapper__show{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: url("https://media.gettyimages.com/photos/sporty-man-running-up-steps-in-urban-setting-picture-id631184594?s=2048x2048");
+  
+  &__top{
+    height: 40px;
+    width: 100vw;
+    font-size: 40px;
+    a{
+      float: right;
+      color: black;
+      font-size: 20px;
+      text-decoration: none;
+    }
+  }
+  &__left{
+    width: 50%;
+    height: calc(100vh - 40px - 70px);
+    float: left;
+    overflow: scroll;
+    &__message{
+      height: 250px;
+      width: 450px;
+      margin: 0 auto;
+      background-color:white;
+      margin-top: 10px;
+      overflow: scroll;
+      border-radius: 30px;
+      padding: 10px;
+      overflow: scroll;
+      opacity: 0.8;
+    }
+    &__image{
+      height: 400px;
+      width: 600px;
+      margin: 0 auto;
+      background-color:white;
+      margin-top: 10px;
+      overflow: scroll;
+      border-radius: 30px;
+      text-align: center;
+      padding-top: 10px;
+      overflow: scroll;
+      opacity: 0.8;
+    }
+      
+  }
+  &__right{
+    width: 50%;
+    height: calc(100vh - 40px - 70px);
+    float: right;
+    overflow: scroll;
+    &__message{
+      height: 250px;
+      width: 450px;
+      margin: 0 auto;
+      background-color:white;
+      margin-top: 10px;
+      overflow: scroll;
+      border-radius: 30px;
+      padding: 10px;
+      opacity: 0.8;
+      // text-align: center;
+      overflow: scroll;
+      &__name{
+        float: right;
+        font-size: 15px;
+        margin-top: 10px;
+      }
+    }
+    &__image{
+      height: 400px;
+      width: 600px;
+      margin: 0 auto;
+      background-color:white;
+      margin-top: 10px;
+      overflow: scroll;
+      border-radius: 30px;
+      text-align: center;
+      padding-top: 10px;
+      overflow: scroll;
+    }
+      
+  }
+  &__bottom{
+    width: 100vw;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    opacity: 0.8;
+    form{
+      width: 100vw;
+      height: 70px;
+    }
+    &__answer{
+      width: 80%;
+      height: 50px;
+      margin: 0 auto;
+      margin-left: 40px;
+    }
+    &__send{
+      margin-left: 30px;
+    }
+  }
+  
+}
+
+
+
 

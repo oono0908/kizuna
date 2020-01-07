@@ -1,0 +1,35 @@
+.main
+  .main__top
+    .main__top__left
+      %ul
+        %li
+          user:
+          = current_user.name
+          = link_to edit_user_path(current_user) do
+            %i.fa.fa-user-edit
+          Existing group total：
+          = Group.count
+        
+    .main__top__right
+      .main__top__right__group
+        = link_to edit_group_path(@group) do
+          = @group.name
+      =link_to cares_path do      
+        %i.fa.fa-user-injured
+      =link_to nutritions_path do 
+        %i.fa.fa-apple-alt
+      =link_to trains_path do   
+        %i.fa.fa-running
+      =link_to nikkans_path do
+        %i.fa.fa-newspaper
+  .main__middle
+    = render @messages
+  .main__bottom
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: "main__bottom__quest", placeholder: "質問を入力してください" 
+      -# .main__bottom__image
+      = f.label :video do
+        = icon("fa", "image", class: "icon") 
+        = f.file_field :video, class: "hidden"
+      = f.submit "質問する", class: "main__bottom__send"
+      
