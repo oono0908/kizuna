@@ -1,8 +1,6 @@
 .wrapper__nikkan{
-  // display: flex;
-  // justify-content: space-between;
   font-size: 30px;
-  a{
+  .wrapper__nikkan__bar a{
     float: right;
     text-decoration: none;
     font-size: 25px;
@@ -19,7 +17,8 @@
       border: 2px solid black;
       a{
         color: white;
-        padding-right: 100px;
+        display: block;
+        text-align: center;
       }
     }
   }
@@ -29,11 +28,9 @@
     display: flex;
     justify-content: space-between;
     background-color: gainsboro;
-    // overflow: scroll;
     &__list{
       overflow: scroll;
       width: 300px;
-      // height: 100vh;
       &__side{
         width: 300px;
         height: 100vh;
@@ -48,30 +45,30 @@
     font-size: 20px;
     border: 1px solid;
     margin-top: 10px;
-    // color: white;
   }
   .wrapper__nikkan__list__side__b{
     font-size: 20px;
     border: 1px solid;
     margin-top: 10px;
-    // color: white;
   }
   .wrapper__nikkan__list__side__c{
     font-size: 20px;
     border: 1px solid;
     margin-top: 10px;
-    // color: white;
   }
   .wrapper__nikkan__list__side__d{
     font-size: 20px;
     border: 1px solid;
     margin-top: 10px;
-    // color: white;
   }
   .wrapper__nikkan__list__side__e{
     font-size: 20px;
     border: 1px solid;
     margin-top: 10px;
-    // color: white;
+  }
+  .img{
+    width: 300px;
+    height: 150px;
+    text-align: center;
   }
 }

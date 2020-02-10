@@ -32,6 +32,7 @@ $(function() {
   }
   $("#user-search-field").on("keyup", function() {
     let input = $("#user-search-field").val();
+    
     $.ajax({
       type: "GET",
       url: "/users",
@@ -57,7 +58,6 @@ $(function() {
       });
   });
 $(document).on("click", ".chat-group-user__btn--add", function() {
-  console.log
   const userName = $(this).attr("data-user-name");
   const userId = $(this).attr("data-user-id");
   $(this)
@@ -78,24 +78,4 @@ $('.account-page').bgSwitcher({
   effect: "fade",
   duration: 3000,
 });
-  // function photoChange(target){
-  //   var items = target.find("li");
-  //   var current = 0;
-
-  // function open(){
-  //     $(items[current]).fadeIn(2000, 'easeInQuad', function(){
-  //       setTimeout(change, 2000); 
-  //     });
-  //   };
-  // function close(){
-  //   $(items[current]).fadeOut(2000, 'easeOutQuad');
-  // };
-  // function change(){
-  //   close();
-  //   current = ++current % items.length;
-  //   open();
-  //   };
-  //   open();
-  // };
-  // photoChange($("#slider"));
 });

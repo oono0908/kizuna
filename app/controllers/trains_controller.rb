@@ -187,12 +187,13 @@ end
      else 
        @rank = "F"
    end
+   
   end
 
   def create
     Train.create(test_params)
-  redirect_to trains_path
-end
+    redirect_to trains_path
+  end
 
 
 

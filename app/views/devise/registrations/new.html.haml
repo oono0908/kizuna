@@ -28,5 +28,20 @@
             = f.label :password_confirmation
           .field-input
             = f.password_field :password_confirmation, autocomplete: "off"
+        .field
+          .field-label
+            = f.label :age
+          .field-input
+            = f.text_field :age
+        .field
+          .field-label
+            = f.label :carrer
+          .field-input
+            = f.text_area :carrer, placeholder: '例）中学 野球（全国大会出場）, 高校 硬式野球（山口県大会ベスト８）, 大学 陸上競技（十種競技）',class: "carrer"
+        .field
+          .field-label
+            = f.label :comment
+          .field-input
+            = f.text_area :comment, placeholder: "例）十種競技に関わらず様々なアスリートと関わっていきたいです", class: "carrer"
         .actions
           = f.submit "Create Account", class: 'btn'

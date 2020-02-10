@@ -1,0 +1,105 @@
+
+-# - @message.each do |comment|
+-#   = comment.content
+-# - @comment.each do |comment|
+-#   = comment.content
+.wrapper_show
+  .wrapper_show__header
+    .wrapper_show__header__left
+      User detail
+      = @user.name
+    .wrapper_show__header__right
+      = link_to root_path do
+        トップに戻る
+  .wrapper_show__middle
+    .wrapper_show__middle__left
+      .wrapper_show__middle__left__age
+        %span.age 年齢
+        = @user.age
+      .wrapper_show__middle__left__age
+        .age 経歴
+        =@user.carrer
+      .wrapper_show__middle__left__age
+        .age コメント
+        =@user.comment
+    .wrapper_show__middle__right
+      .wrapper_show__middle__right__1
+        .question 
+          Sports test score
+        .comments
+          - @train.each do |train|
+            .middle__main_right
+              %table
+                %caption
+                  結果
+                  = train.created_at.strftime("%Y-%m-%d %H:%M")
+                  %thead
+                    %tr
+                      %th
+                        種目
+                        %th
+                          結果
+                          -# %th
+                          -#   ランク
+                  %tbody
+                    %tr
+                      %td
+                        50M走
+                        %td
+                          = train.short
+                          -# %td
+                          -#   -# = @ranks
+                    %tr
+                      %td
+                        1500M走
+                        %td
+                          = train.long
+                          -# %td
+                          -#   -# = @ranksl
+                    %tr
+                      %td
+                        立ち幅跳び
+                        %td
+                          = train.jump
+                          -# %td
+                          -#   -# = @ranksj
+                    %tr
+                      %td
+                        上体起こし
+                        %td
+                          = train.situp
+                          -# %td
+                          -#   -# = @rankss
+                    %tr
+                      %td
+                        ハンドボール投げ
+                        %td
+                          = train.hand
+                          -# %td
+                          -#   -# = @ranksh
+                    %tr
+                      %td
+                        反復横跳び
+                        %td
+                          = train.side
+                          -# %td
+                          -#   -# = @ranksi
+                  -# %tfoot
+                  -#   %tr
+                  -#     %td
+                  -#       総合評価
+                  -#       %td
+
+                          -# %td
+                          -#   -# = @rank
+        
+      .wrapper_show__middle__right__2
+        .question
+          Your questions
+        .comments
+          - @message.each do |comment|
+            .comment
+              = comment.content
+              = link_to group_message_path(comment.group.id, comment.id) do
+                %span.answer 回答へ
+

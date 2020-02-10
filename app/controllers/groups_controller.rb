@@ -2,9 +2,6 @@ class GroupsController < ApplicationController
   before_action :set_group, only: [:edit, :update]
 
   def index
-    # @comment = Comment.new
-    # @message = Message.new
-    # @comments = .comments.includes(:user)
   end
 
   def new
@@ -43,7 +40,4 @@ class GroupsController < ApplicationController
   end
 
 
-  # def get_group
-  #   # @group = Group.find(params[:group_id])
-  # end
 end

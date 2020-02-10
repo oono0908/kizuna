@@ -1,5 +1,5 @@
 .wrapper_chest{
-  background-image: url("https://image.toremy.jp/uploads/image/e5b0a0da-f374-40d4-942b-6d211d526f9b.png");
+  background-image: url("https://media.gettyimages.com/photos/female-jogger-resting-picture-id950932388?s=2048x2048");
   height: 100vh;
   width: 100vw;
   background-size: contain;
@@ -38,14 +38,12 @@
         width: 90%;
         height: 40px;
         background-color: white;
-        // opacity: 0.8;
         margin: 30px;
       }
       &__content{
         width: 90%;
         height: 350px;
         background-color: white;
-        // opacity: 0.8;
         margin: 30px;
       }
       &__image{
@@ -66,7 +64,6 @@
       height: 90%;
       background-color: black;
       opacity: 0.7;
-      // background-color: white;
       margin-top: 20px;
       overflow: scroll;
       margin-left: 10px;
@@ -77,14 +74,12 @@
           width: 90%;
           height: 40px;
           background-color: white;
-          // opacity: 0.8;
           margin: 30px;
         }
         &__content{
           width: 90%;
           height: 350px;
           background-color: white;
-          // opacity: 0.8;
           margin: 30px;
         }
       }
@@ -96,4 +91,7 @@
   .file{
     display: none;
   }
+}
+a:hover{
+  opacity: 0.5;
 }

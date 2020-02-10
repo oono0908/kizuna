@@ -2,10 +2,18 @@ class CommentsController < ApplicationController
   before_action :set_group
   before_action :set_message
 
-  
+  def index
+  end
   def create
     Comment.create(comment_params)
     redirect_to group_message_path(@group,@message) 
+  end
+
+  def destroy
+    comment = Comment.find(params[:id])
+    if comment.destroy
+      redirect_to group_message_path(@group,@message)
+    end
   end
 
 private
@@ -25,8 +33,3 @@ private
 end
 
 
-# def comments_path
-#   group_message_comments(group, message, self)
-# end
-
-# @comment.comments_path

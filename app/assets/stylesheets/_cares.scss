@@ -3,14 +3,12 @@
   height: 100vh;
   width: 100vw;
   background-size: contain;
-  // background-repeat:  no-repeat; 
   background-position:center center;
   color: yellow;
   &__header{
     font-size: 30px;
     height: 45px;
     width: 100vw;
-    // background-color: white;
     a{
       text-decoration: none;
       color: yellow;
@@ -69,7 +67,6 @@
   &__bottom{
     font-size: 60px;
     text-align: center;
-    // 
     color: yellow;
     opacity: 0.9;
     &__figure{

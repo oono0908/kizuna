@@ -5,9 +5,13 @@
         = message.content
     .main__middle__message__quest__image
       - if message.video.present?
-        = video_tag message.video.url, controls: true, width: "700px", height: "500px"
+        = video_tag message.video.url, controls: true, width: "300px", height: "400px"
     .main__middle__message__quest__show
+      =link_to user_path(message.user.id) do
+        by
+        = message.user.name
       = link_to group_message_path(@group, message) do
         回答
-      = link_to group_message_path(@group, message), method: :delete do
-        削除
+      - if user_signed_in? && current_user.id == message.user_id
+        = link_to group_message_path(@group, message), method: :delete do
+          削除

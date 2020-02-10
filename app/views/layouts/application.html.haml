@@ -3,8 +3,6 @@
   %head
     %script
       "jquery.easing.1.3.js"
-      -# "/js/jquery.bgswitcher.js"
-      -# "https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Kizuna
     = csrf_meta_tags
@@ -12,7 +10,7 @@
     = javascript_include_tag 'application'
     
   %body
-    = render 'layouts/notifications'
+    -# = render 'layouts/notifications'
     = yield
 
 

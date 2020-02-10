@@ -1,0 +1,26 @@
+.wrapper_chest
+  .wrapper_chest__top
+    = link_to root_path do
+      TOPページに戻る
+    %h2 Tell us your traning experience and approrch for thigh
+  .wrapper_chest__middle
+    .wrapper_chest__middle__left
+      = form_for [@thigh] do |f|
+        = f.text_field :title, class: "wrapper_chest__middle__left__title", placeholder: "タイトルを入力してください。"
+        = f.text_area :content, class: "wrapper_chest__middle__left__content", rows: "10", cols: "20", wrap: "hard", placeholder: "あなたのトレーニング方法を教えて下さい、また動画を投稿する場合は下記のイメージアイコンをクリックし、ファイルから選択し、投稿してください。"
+        %label.wrapper_chest__middle__left__image
+          = icon("fa", "image", class: "icon") 
+          = f.file_field :video, class: "file", rows: "10", cols: "20", wrap: "hard"
+        =f.submit "共有する", class: "wrapper_chest__middle__left__send"
+    .wrapper_chest__middle__right
+      - @thighs.each do |chest|
+        .wrappr_chest__middle__right__a
+          .wrapper_chest__middle__right__a__title
+            = chest.title
+          .wrapper_chest__middle__right__a__content
+            = chest.content
+            = video_tag chest.video.url, width: "600px", height: "300px" unless chest.video.blank?
+  .wrapper_chest__bottom
+    Let's share your traning experience. Maybe, many people are curious about your traning. Because there are several kinds of training in the world. By finding training that match you, you will be more stronger.
+
+

@@ -4,7 +4,8 @@
       %ul
         %li
           user:
-          = current_user.name
+          = link_to user_path(current_user) do
+            = current_user.name
           = link_to edit_user_path(current_user) do
             %i.fa.fa-user-edit
           Existing group total：
@@ -23,11 +24,46 @@
       =link_to nikkans_path do
         %i.fa.fa-newspaper
   .main__middle
-    = render @messages
+    .main__middle__news
+      .title
+        Today's news from Number
+      .wrapper__nikkan__main__list1
+        .wrapper__nikkan__list__side
+          .wrapper__nikkan__list__side__c
+            .image_number
+              = image_tag @imagen1
+            .text_nember
+              = @texty1
+              = @timen1 
+          .wrapper__nikkan__list__side__c
+            .image_number
+              = image_tag @imagen2
+            .text_nember
+              = @texty2
+              = @timen2
+          .wrapper__nikkan__list__side__c
+            .image_number
+              = image_tag @imagen3
+            .text_nember
+              = @texty3
+              = @timen3
+          .wrapper__nikkan__list__side__c
+            .image_number
+              = image_tag @imagen4
+            .text_nember
+              = @texty4
+              = @timen4
+          .wrapper__nikkan__list__side__c
+            .image_number
+              = image_tag @imagen5
+            .text_nember
+              = @texty5
+              = @timen5
+    .sin
+      = render @messages
   .main__bottom
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: "main__bottom__quest", placeholder: "質問を入力してください" 
-      -# .main__bottom__image
       = f.label :video do
         = icon("fa", "image", class: "icon") 
         = f.file_field :video, class: "hidden"

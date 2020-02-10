@@ -13,8 +13,25 @@
     - @comments.each do |comment|
       .wrapper__show__right__message
         = comment.content
+        - if current_user.already_liked?(comment.id)
+          %label
+            %i.fa.fa-heart.red
+              = link_to group_message_comment_like_path(@group, @message, comment.id, comment.likes), method: :delete do
+                %input.like{class: "red",type: "button", value: "いいねを取り消す"}
+        - else
+          %label
+            %i.fa.fa-heart.white
+              = link_to group_message_comment_likes_path(@group, @message, comment.id), method: :post do
+                %input.like{class: "white", type: "button", value: "いいね"}
+        = comment.liked_users.count
         .wrapper__show__right__message__name
-          = current_user.name
+          = link_to user_path(comment.user.id) do
+            by
+            = comment.user.name
+          - if user_signed_in? && current_user.id == comment.user_id
+            = link_to group_message_comment_path(@group, @message, comment), method: :delete do
+              削除
+
   .wrapper__show__bottom
     = form_for [@group, @message, @comment] do |f|
       = f.text_field :content, class: "wrapper__show__bottom__answer", placeholder: "回答を入力してください" 

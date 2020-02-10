@@ -170,43 +170,13 @@ else if (cnt >= 30 && cnt < 31){
     i = i + 1
     $(".care_wrapper__bottom__figure").text(i)
  });
-  // }
+
   $(".reset").click(function(){
     i = i * 0
     $(".care_wrapper__bottom__figure").text(i)
     $(".care_wrapper__bottom__end").text("Press start")
    });
-
-  // var i = 0
-  // $('.btn').click(function() {
-  //   i = i + 1
-  //   $(".care_wrapper__bottom__figure").text(i)
 });
-// var STEP = 30;
-//   var TYPING_LINE = '<span class="line">_</span>';
-
-//   function setTextAnimate(target){
-//     var str = target.text();
-//     var num = 0;
-//     var typingLine;
-
-//     target.text('').append(TYPING_LINE);
-//     typingLine = target.find('.line');
-
-//     for(var i=0; i<str.length; i++){
-//       setTimeout(function(){
-//         typingLine.remove();
-//         target.append( str.charAt(num)).append(typingLine);
-//         num++;
-//       }, i*STEP);
-//     };
-//    setTimeout(function(){
-//     typingLine.remove();
-//   }, str.length*STEP);
-//   };
-//   $.each($('.care_wrapper'), function(){
-//    setTextAnimate($(this));
-// });
 });
 
 

@@ -54,8 +54,8 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.main__middle').append(html);
-      $('.main__middle').animate({ scrollTop: $('.main__middle')[0].scrollHeight});      
+      $('.sin').append(html);
+      $('.sin').animate({ scrollTop: $('.sin')[0].scrollHeight});      
        $('#new_message')[0].reset();
        $(".main__bottom__send").prop("disabled", false);
     })

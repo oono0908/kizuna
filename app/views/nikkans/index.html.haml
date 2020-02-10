@@ -1,7 +1,8 @@
 .wrapper__nikkan
-  Today's news
-  = link_to root_path do
-    TOPページへ戻る
+  .wrapper__nikkan__bar
+    Today's news
+    = link_to root_path do
+      TOPページへ戻る
   .wrapper__nikkan__header
     .wrapper__nikkan__header__list
       = link_to "https://hochi.news/" do
@@ -10,15 +11,15 @@
       = link_to "https://sports.yahoo.co.jp/" do
         Yahoo sports
     .wrapper__nikkan__header__list
-      = link_to "https://4years.asahi.com/" do
-        4years
+      = link_to "https://number.bunshun.jp/" do
+        Number
     .wrapper__nikkan__header__list
       = link_to "https://jp.reuters.com/news/sports" do
         Reuters
     .wrapper__nikkan__header__list
     
-      = link_to "https://spyder7.com/category/sport/foreign/latest/" do
-        Spyder7
+      = link_to "https://sportsbull.jp/" do
+        Sports Bull
   .wrapper__nikkan__main
     .wrapper__nikkan__main__list
       .wrapper__nikkan__list__side
@@ -40,74 +41,89 @@
     .wrapper__nikkan__main__list
       .wrapper__nikkan__list__side__b
         = @textsp
-        = image_tag @imagesp
       .wrapper__nikkan__list__side__b
         = @textsp1
-        = image_tag @imagesp1
       .wrapper__nikkan__list__side__b
         = @textsp2
-        = image_tag @imagesp2
       .wrapper__nikkan__list__side__b
         = @textsp3
-        = image_tag @imagesp3
       .wrapper__nikkan__list__side__b
         = @textsp4
-        = image_tag @imagesp4
         
     .wrapper__nikkan__main__list
       .wrapper__nikkan__list__side
         .wrapper__nikkan__list__side__c
+          = image_tag @imagen1
           = @texty1
-          
-          -# = @timey1
+          = @timen1 
         .wrapper__nikkan__list__side__c
+          = image_tag @imagen2
           = @texty2
+          = @timen2
         .wrapper__nikkan__list__side__c
+          = image_tag @imagen3
           = @texty3
+          = @timen3
         .wrapper__nikkan__list__side__c
+          = image_tag @imagen4
           = @texty4
+          = @timen4
         .wrapper__nikkan__list__side__c
+          = image_tag @imagen5
           = @texty5
+          = @timen5
 
-        -# = image_tag @link2
        
     .wrapper__nikkan__main__list
       .wrapper__nikkan__list__side
         .wrapper__nikkan__list__side__d
-          -# = image_tag @imagey1
-          = @textro1
+          - if @imagey1.present?
+            = image_tag @imagey1, class: "img"
+            = @textro1
         .wrapper__nikkan__list__side__d
-          -# = image_tag @imagey2
-          = @textro2
+          - if @imagey2.present?
+            = image_tag @imagey2, class: "img"
+            = @textro2
         .wrapper__nikkan__list__side__d
-          -# = image_tag @imagey3
-          = @textro3
+          - if @imagey3.present?
+            = image_tag @imagey3, class: "img"
+            = @textro3
         .wrapper__nikkan__list__side__d
-          -# = image_tag @imagey4
           = @textro4
         .wrapper__nikkan__list__side__d
-          = image_tag @imagey5
+          - if @imagey5.present?
+            = image_tag @imagey5, class: "img"
           = @textro5
-        -# .wrapper__nikkan__list__side__in
-        -# = image_tag @link3
        
     .wrapper__nikkan__main__list
       .wrapper__nikkan__list__side
         .wrapper__nikkan__list__side__e
-          = @textse1
+          = image_tag @imageb1, class: "img"
+          = @textsb1
+          = @timeb1 
         .wrapper__nikkan__list__side__e
-          = @textse2
+          = image_tag @imageb2, class: "img"
+          = @textsb2
+          = @timeb2
         .wrapper__nikkan__list__side__e
-          = @textse3
+          = image_tag @imageb3, class: "img"
+          = @textsb3
+          = @timeb3
         .wrapper__nikkan__list__side__e
-          = @textse4
+          = image_tag @imageb4, class: "img"
+          = @textsb4
+          = @timeb4
         .wrapper__nikkan__list__side__e
-          = @textse5
+          = image_tag @imageb5, class: "img"
+          = @textsb5
+          = @timeb5
         .wrapper__nikkan__list__side__e
-          = @textse6
+          = image_tag @imageb6, class: "img"
+          = @textsb6
+          = @timeb6
         .wrapper__nikkan__list__side__e
-          = @textse7
-          = image_tag @imagese
-        -# .wrapper__nikkan__list__side__in
-        -# = image_tag @link4
+          = image_tag @imageb7, class: "img"
+          = @textsb7
+          = @timeb7 
+
   .wrapper__nikkan__bottom
