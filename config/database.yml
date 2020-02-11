@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: kizuna_production
-  username: kizuna
-  password: <%= ENV['KIZUNA_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
