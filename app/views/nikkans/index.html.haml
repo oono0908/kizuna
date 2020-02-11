@@ -98,31 +98,38 @@
     .wrapper__nikkan__main__list
       .wrapper__nikkan__list__side
         .wrapper__nikkan__list__side__e
-          = image_tag @imageb1, class: "img"
+          - if @imageb1.present?
+            = image_tag @imageb1, class: "img"
           = @textsb1
           = @timeb1 
         .wrapper__nikkan__list__side__e
-          = image_tag @imageb2, class: "img"
+          - if @imageb2.present?
+            = image_tag @imageb2, class: "img"
           = @textsb2
           = @timeb2
         .wrapper__nikkan__list__side__e
-          = image_tag @imageb3, class: "img"
+          - if @imageb3.present?
+            = image_tag @imageb3, class: "img"
           = @textsb3
           = @timeb3
         .wrapper__nikkan__list__side__e
-          = image_tag @imageb4, class: "img"
+          - if @imageb4.present?
+            = image_tag @imageb4, class: "img"
           = @textsb4
           = @timeb4
         .wrapper__nikkan__list__side__e
-          = image_tag @imageb5, class: "img"
+          - if @imageb5.present?
+            = image_tag @imageb5, class: "img"
           = @textsb5
           = @timeb5
         .wrapper__nikkan__list__side__e
-          = image_tag @imageb6, class: "img"
+          - if @imageb6.present?
+            = image_tag @imageb6, class: "img"
           = @textsb6
           = @timeb6
         .wrapper__nikkan__list__side__e
-          = image_tag @imageb7, class: "img"
+          - if @imageb7.present?
+            = image_tag @imageb7, class: "img"
           = @textsb7
           = @timeb7 
 
