@@ -3,8 +3,9 @@ class TrainsController < ApplicationController
   
 
   def index
-   @train = Train.new
+   @train = Train.new 
    @trains = Train.last(1)
+   if @trains.present?
    @trains.each do |train|
      @short = train.short
      @time = train.created_at
@@ -187,6 +188,7 @@ end
      else 
        @rank = "F"
    end
+  end
    
   end
 
