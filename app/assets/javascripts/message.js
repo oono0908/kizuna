@@ -8,7 +8,7 @@ $(function(){
       ${message.content}
       </div>
       <div class="main__middle__message__quest__image">
-      <video width="500px" height="300px" src=${message.video}></video>
+      <video controls = "controls" width="500px" height="300px" src=${message.video}></video>
       </div>
       <div class="main__middle__message__quest__show">
       <a href=/groups/${message.group_id}/messages/${message.message_id}>回答
